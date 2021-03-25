@@ -78,11 +78,12 @@
 
         //CREAR LAS GEOMETRÍAS
         //Punto
-        var geometry = new THREE.ConeGeometry( 3, 5, 8 );
+        var geometry = new THREE.ConeGeometry( 3, 5, 30);
         var material = new THREE.MeshNormalMaterial();
         var cube = new THREE.Mesh( geometry, material );
         scene.add( cube );
         cube.rotation.z = Math.PI /2;
+        cube.position.x= -2.5;
         cube.name="cube";
       
         /*var material = new THREE.MeshNormalMaterial();
@@ -123,6 +124,11 @@
           var cube2 = scene.getObjectByName("cube2");
           if (keyCode == 65) {// A para rotar
             cube.rotation.y=Math.PI/2;
+            cube.rotation.x=Math.PI/6;
+            cube.position.z= 3.6;
+            cube.position.x= 0.8;
+            cube.position.y= 1;
+            
           }
         }
 
